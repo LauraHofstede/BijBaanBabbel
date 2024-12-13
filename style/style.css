@@ -1,0 +1,348 @@
+/* FONTS */
+@import url("https://use.typekit.net/ahn4ebq.css");
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "report";
+    font-weight: 400;
+    font-style: normal;
+    font-size: larger;
+}
+
+span {
+    background-color: #C4DC99;
+    font-weight: bold;
+    padding: 0 .2em;
+}
+h1, h2, h3 {
+    font-family: "bree", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h1, .index section:nth-child(3) h2{
+    font-size: 2.2em;
+    padding: 2em 0;
+}
+h2, .index h3 {
+    font-size: 2em;
+}
+p {
+    font-size: 1.3em;
+}
+a {
+    color: #EC5C63;
+}
+
+header {
+    border-bottom: 7px solid #F39896;
+    display: flex;
+    align-items: center;
+}
+header img {
+    height: 100px;
+    padding: 0 3rem;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase; 
+    padding: 1rem;
+  }
+    nav a:hover, nav a:focus {
+      color: #EC5C63;
+      text-decoration: 2px #EC5C63 wavy underline;
+      text-underline-offset: .5rem; 
+    }
+    nav a:active {
+        color: #C4DC99;
+        text-decoration: 1px #C4DC99 wavy underline;
+        text-underline-offset: .5rem;
+    }
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 25%;
+    background-color: #F3D4DA;
+    border-top: 7px solid #F39896;
+}
+footer ul {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    padding: 0rem;
+    }
+
+
+    
+
+/* code van a11y  https://www.a11yproject.com/posts/how-to-hide-content/ */
+body.index h1 {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+     width: 1px;
+}
+
+/* section met teaservideo */
+body.index main div:nth-child(1){
+    background-color: #C4DC99;
+    height: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+body.index  div:first-child  iframe {
+    scale: 150%;
+    border: 15px solid #EC5C63;
+    border-style: double;
+}
+body.index div q {
+    background-color: #F3D4DA;
+    color: #EC5C63;
+    font-size: 2em;
+    padding: .2em .5em;
+
+    position: absolute;
+    right: 9em;
+    top: 4em;
+    transform:rotate(10deg);
+}
+
+
+
+/* stukje text */
+body.index  main > p {
+    border-top: 70px solid #F39896;
+    border-bottom: 70px solid #F39896;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5% 25%;
+}
+
+
+/*  section nieuwste aflevering */
+
+body.index section:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+/* achtergrond textwolkje */
+body.index section:nth-child(3) > img {
+    width: 70%;
+}
+
+/* Hier class gebruikt omdat het anders te ingewikkeld werd met selectoren */
+.index_afl_info {
+    position: absolute;
+    top: 33%;
+    left: 20%;
+
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+}
+.index_afl_info img{
+    border-radius: 2rem;
+}
+/* afl datum en duur aflevering */
+.index_afl_info div div{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.index_afl_info div img{
+    width: 25%;
+}
+
+
+
+
+
+
+
+body.overzicht main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+body.overzicht section {
+    width: 75%;
+    margin: auto;
+}
+
+/* aflevering blokje */
+body.overzicht article {
+    background-color: #FCEEF1;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+
+    transition: 200ms ease;
+}
+    body.overzicht article:hover {
+        transform: scale(1.05);
+    }
+
+
+/* tumbnail img */
+body.overzicht article img:first-child {
+    border-radius: 1rem;
+    width: 20%;
+    height: fit-content;
+}
+
+body.overzicht article > div {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+body.overzicht article div div{
+    color: #EC5C63;
+    display: flex;
+    gap: 1rem;
+}
+body.overzicht article div p:nth-child(4){
+    color: #EC5C63;
+    text-decoration: solid underline #EC5C63;
+}
+
+
+
+/* playbutton img */
+body.overzicht article img:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    margin-top: auto;
+}
+    .index_afl_info div img:hover, body.overzicht article img:nth-child(3):hover {
+        animation-name: rotate;
+        animation-duration: 3s;
+    }
+
+@keyframes rotate {
+    0% {
+        transform:rotate(0deg);
+    }
+
+    50% {
+        transform:rotate(360deg);
+    }
+
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* grid gebruikt omt gelijke breedte te geven, padding gebruikt omdat ik geen breedte aan kon geven vanwege de achtergrondkleur  */
+body.overons section:nth-child(1){
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+    padding: 5% 15%;
+    background-color: #FCEEF1;
+}
+body.overons section:nth-child(1) div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+/* breedte aanpassen omdat die anders niet de volledige breedte van de grid gebruikt */
+body.overons section:nth-child(1) img{
+    width: 100%;
+}
+
+
+/* over ons pagina  */
+body.overons h1{
+    border-bottom: 5px dotted #EC5C63;
+    padding-bottom: .5em;
+}
+body.overons section:nth-child(2) h2, body.overons section:nth-child(3) h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: 5px dotted underline #EC5C63;
+    text-underline-offset: .5em;
+    padding: 1em 0 1.5em 0;
+}
+body.overons section:nth-child(2) h2{
+    background-color: #F3D4DA;
+}
+body.overons section:nth-child(3) h2, body.overons section:nth-child(3){
+    background-color: #C4DC99;
+}
+
+/* waarombijbaanbabbel text */
+body.overons section:nth-child(2) p{
+    width: 60%;
+    margin: auto;
+    padding: 5% ;
+    text-align: center;
+}
+
+/*  isabella yenthe laura */
+/*  Yenthe */
+body.overons section:nth-child(3) div:nth-child(3) {
+    background-color: white;
+}
+    body.overons section:nth-child(3) div:nth-child(3) img {
+        transform: rotate(7deg);
+        border: 20px solid #EC5C63;
+        border-style: double;
+    }
+
+/* content in center met padding want ik kon de breedte niet aanpassen omdat de achtergrond dan niet volledig een kleur heeft. */
+body.overons section:nth-child(3) div {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2% 15%;
+}
+    body.overons section:nth-child(3) div img{
+        border: 10px solid white;
+        transition: 200ms ease;
+    }
+        body.overons section:nth-child(3) div img:hover {
+            transform: scale(1.1)  rotate(-7deg);
+        }
+
+
+
+
+
